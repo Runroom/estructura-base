@@ -1,0 +1,7 @@
+<div class="cookies-advice">
+  <p class="cookies-advice__content">{{ cookiesAdvice.content }}</p>
+  {% include '../atoms/button.twig' with {component: {
+    class: 'cookies-advice__button',
+    label: cookiesAdvice.button
+  }} %}
+</div>

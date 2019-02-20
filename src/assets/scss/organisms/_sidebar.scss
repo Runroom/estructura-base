@@ -1,0 +1,74 @@
+.sidebar {
+    color: $c-white;
+    height: 100vh;
+    left: calc(-100% + #{$sidebarSmall});
+    overflow: scroll;
+    position: fixed;
+    top: 0;
+    transition: all .3s ease-in-out;
+    width: 100%;
+    z-index: 1;
+
+    @include breakpoint($s768) {
+        background: $c-neutro600;
+        left: ($sidebarSmall - $sidebarWidth);
+        width: $sidebarWidth;
+    }
+
+    &::before {
+        background-color: rgba($c-black, .1);
+        display: none;
+        height: 100vh;
+        left: 0;
+        min-height: 100%;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 0;
+    }
+
+    &.is-open {
+      left: 0;
+
+      &::before { display: block; }
+    }
+
+    &__nav {
+        background: $c-neutro600;
+        min-height: 100%;
+        opacity: 0;
+        padding: space();
+        position: relative;
+        transition: opacity .3s ease-in-out;
+        z-index: 1;
+
+        .is-open & { opacity: 1; }
+    }
+
+    &__logo {
+        margin: 0 0 space() auto;
+    }
+
+    &__section {
+        color: $c-white;
+        font-size: ms(2);
+        margin: space() 0 space(.25);
+
+        &:first-child { margin-top: 0; }
+    }
+
+    &__link {
+        color: $c-white;
+        font-size: ms(-1);
+        font-weight: 400;
+        padding: space(.25) space(.5);
+        text-decoration: none;
+
+        &:hover {
+            html.non-touch & {
+                color: $c-white;
+                opacity: .5;
+            }
+        }
+    }
+}

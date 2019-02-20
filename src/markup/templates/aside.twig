@@ -1,0 +1,8 @@
+{% extends './templates/base.twig' %}
+
+{% block body %}
+  {% include '../organisms/sidebar.twig' %}
+  <main role="main" class="main">
+    {% block main %}{% endblock %}
+  </main>
+{% endblock %}

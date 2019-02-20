@@ -1,0 +1,3 @@
+{% set tag = component.tag|default('button') %}
+{% set role = component.role|default('button') %}
+<{{ tag }} role="{{ role }}" {% if component.link is defined %}href="{{ component.link }}"{% endif %} class="button {{ component.class|default('') }}">{{ component.label }}</{{ tag }}>

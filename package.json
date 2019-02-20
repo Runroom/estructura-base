@@ -1,0 +1,11 @@
+{
+  "name": "estructura-base",
+  "version": "1.0.0",
+  "description": "Estructura base para proyectos",
+  "scripts": {
+    "start": ""
+  },
+  "keywords": [ "boilerplate" ],
+  "author": "Runroom <runroom@runroom.com>",
+  "license": "MIT"
+}
